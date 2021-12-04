@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="borang.css">
+<link rel="stylesheet" href="button.css">
+<h3 class="panjang">DELETE PELAJAR</h3>
+<form class="panjang" action="pelajar_delete.php" method="post">
+<form action="pelajar_delete.php" method="post">
+   <table>
+   <tr>
+       <td>ID Pelajar</td>
+       <td><input type="text" name="idpelajar"></td>
+   </tr>
+    </table>
+    <button class="padam" button type="submit">Padam</button>
+    </form>
+    <br>
+
+    <center>
+        <button class=biru onclick="tukar_warna(0)">Blue</button>
+        <button class=hijau onclick="tukar_warna(1)">Green</button>
+        <button class=merah onclick="tukar_warna(2)">Red</button>
+        <button class=hitam onclick="tukar_warna(3)">Black</button>
+    </center>
+
+    <script>
+
+    function tukar_warna(n){
+       var warna= ["Blue","Green","Red","Black"];
+       var teks = document.getElementsByClassName("warna");
+       for (var i = 0; i <teks.length; i++)
+          teks[i].style.color = warna[n];
+    }
+
+    </script>
+
+<head>
+    <style>
+    body{
+        background-image: url(backgroundcolor.jpg);
+    }
+    </style>
+</head>

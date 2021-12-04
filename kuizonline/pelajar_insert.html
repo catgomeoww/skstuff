@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="borang.css">
+<link rel="stylesheet" href="button.css">
+<h3 class="panjang">ADD STUDENTS</h3>
+<form class="panjang" action="pelajar_insert.php" method="post">
+        <table>
+        <tr>
+            <tr>
+            <td class="warna">Student ID</td>
+                <td><input type="text" name="idpelajar" placeholder="P001" pattern="[A-Z0-9]{4}"
+    oninvalid="this.setCustomValidity('Sila masukkan 4 aksara')" oninput="this.setCustomValidity('')"
+                           required></td>
+    </tr>
+            <tr>
+                <td class="warna">Name</td>
+                <td><input type="text" name="namapelajar"></td>
+            </tr>
+            <tr>
+                <td class="warna">Class ID</td>
+                <td><input type="text" name="idkelas" placeholder="K01"></td>
+            </tr>
+            <tr>
+                <td class="warna">Password</td>
+                <td><input type="text" name="password"></td>
+            </tr>
+        </table>
+        <button class="tambah" type="submit">Submit</button>
+    </form>
+    <br>
+
+    <center>
+        <button class=biru onclick="tukar_warna(0)">Blue</button>
+        <button class=hijau onclick="tukar_warna(1)">Green</button>
+        <button class=merah onclick="tukar_warna(2)">Red</button>
+        <button class=hitam onclick="tukar_warna(3)">Black</button>
+    </center>
+
+    <script>
+
+    function tukar_warna(n){
+       var warna= ["Blue","Green","Red","Black"];
+       var teks = document.getElementsByClassName("warna");
+       for (var i = 0; i <teks.length; i++)
+          teks[i].style.color = warna[n];
+    }
+
+    </script>
+
+<head>
+    <style>
+    body{
+        background-image: url(backgroundcolor.jpg);
+    }
+    </style>
+</head>
